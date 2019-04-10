@@ -35,12 +35,11 @@ class App extends Component {
             if (loading) return <h1>loading...</h1>;
 
             const { posts } = data;
-            console.log(posts);
 
             return (
               <React.Fragment>
-                {posts.map((post: any) => (
-                  <h1>{post.title}</h1>
+                {posts.map((post: any, index: number) => (
+                  <h1 key={index}>{post.title}</h1>
                 ))}
               </React.Fragment>
             );
